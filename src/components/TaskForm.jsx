@@ -14,6 +14,7 @@ export const TaskForm = ({ addTask }) => {
 
 
 
+
     return (
         <form className='task-form' onSubmit={handleSubmit}>
             <input
@@ -23,7 +24,7 @@ export const TaskForm = ({ addTask }) => {
                 onChange={(e) => setWriteTask(e.target.value)}
             />
 
-            <button type="submit">Add Task</button>
+            <button disabled={!writeTask} type="submit">Add Task</button>
         </form>
     )
 }
