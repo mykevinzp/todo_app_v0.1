@@ -1,38 +1,92 @@
-.App {
+/* RESETS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline-offset: 0;
+}
+
+html {
+  font: 62.5% / 1.15 sans-serif;
+}
+
+body {
+  max-width: 80rem;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(207, 44%, 49%);
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.task-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   text-align: center;
+  border: 2px solid cornsilk;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-form {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.task-form button {
+  background-color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.write-task {
+  width: 100%;
+  padding: .75rem;
+  margin: .75rem;
+}
+
+.task-output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: blanchedalmond;
+  margin-bottom: .75rem;
+}
+
+.task-output li {
+  font-size: 2rem;
+}
+
+button {
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.task-output button {
+  background-color: red;
+}
+
+.taskCompleted {
+  text-decoration: line-through;
+}
+
+input {
+  width: 80%;
+  height: 3rem;
+  border: none;
+  border-bottom: .175rem solid aliceblue;
+  outline: none;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: aliceblue;
 }
